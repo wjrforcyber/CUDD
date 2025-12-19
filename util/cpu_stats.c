@@ -15,7 +15,7 @@
 #define end _end
 #endif
 
-extern int end, etext, edata;
+int end, etext, edata;
 
 #endif
 

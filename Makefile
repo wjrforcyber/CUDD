@@ -47,12 +47,13 @@ ICFLAGS	= -g -O6
 # Use XCFLAGS to specify machine-dependent compilation flags.
 # For some platforms no special flags are needed.
 #XCFLAGS	= -DHAVE_IEEE_754 -DBSD
+XCFLAGS = -arch arm64 -mmacosx-version-min=11.0 -DHAVE_IEEE_754 -DBSD
 #
 #==========================
 #  Linux
 #
 # Gcc 2.8.1 or higher on i686.
-XCFLAGS	= -mcpu=pentiumpro -malign-double -DHAVE_IEEE_754 -DBSD
+#XCFLAGS	= -mcpu=pentiumpro -malign-double -DHAVE_IEEE_754 -DBSD
 #
 #==========================
 #  Solaris
