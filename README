@@ -1,3 +1,7 @@
+# CUDD 2.3.1
+There are various different versions on CUDD package, this one is retrieved from [EXTRA page](https://people.eecs.berkeley.edu/~alanmi/research/extra/index.htm) maintained by Dr. Alan Mishchenko.
+
+# Original README
 $Id$
 
 This directory contains a set of packages that allow you to build a toy
