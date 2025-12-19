@@ -1,6 +1,22 @@
 # CUDD 2.3.1
 There are various different versions on CUDD package, this one is retrieved from [EXTRA page](https://people.eecs.berkeley.edu/~alanmi/research/extra/index.htm) maintained by Dr. Alan Mishchenko.
 
+
+# Build
+Make sure the architecture in Makefile fits yours, and make sure
+```bash
+make
+```
+can work well with all library generated.
+
+# Example Usage
+In [example](./example/) folder I give some simple examples, that you could use as a quickstart.
+```bash
+cd example
+gcc bddConstruct.c -I../include -L../cudd/ -lcudd -L../epd -lepd -L../util -lutil -L../st -lst -L../mtr -lmtr -o bddConstruct
+./bddConstruct
+```
+
 # Original README
 $Id$
 
