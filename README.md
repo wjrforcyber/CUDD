@@ -16,6 +16,11 @@ cd example
 gcc bddFromTruthTable.c -I../include -L../cudd/ -lcudd -L../epd -lepd -L../util -lutil -L../st -lst -L../mtr -lmtr -o bddFromTruthTable
 ./bddFromTruthTable 4 43a5 f
 ```
+It will give you
+<p align="center">
+    <img src="./example/resources/images/f.png" width="300"/>
+</p>
+
 Usage:
 ```bash
 Usage: ./bddFromTruthTable <num_vars> <hex_truth> [output_name]
@@ -24,7 +29,8 @@ Example: ./bddFromTruthTable 3 E8 Majority
 
 > [!NOTE]
 > This is for fixed ordered BDD, if you would like dynamic ones, you should remove the comment on `Cudd_AutodynEnable`.
-> You also need to make sure `dot` is installed on system to successfully generate the PNG file.
+> <br>You also need to make sure `dot` is installed on system to successfully generate the PNG file.
+> <br>There are three kinds of lines: solid line: THEN arcs;dotted line: complement arcs; dashed line: regular ELSE arcs.
 
 # Original README
 $Id$
