@@ -10,12 +10,21 @@ make
 can work well with all library generated.
 
 # Example Usage
-In [example](./example/) folder I give some simple examples, that you could use as a quickstart.
+There's a simple example in [example](./example/), that you could use as a quick start for transforming truth table to dot file and generate PNG for show.
 ```bash
 cd example
-gcc bddConstruct.c -I../include -L../cudd/ -lcudd -L../epd -lepd -L../util -lutil -L../st -lst -L../mtr -lmtr -o bddConstruct
-./bddConstruct
+gcc bddFromTruthTable.c -I../include -L../cudd/ -lcudd -L../epd -lepd -L../util -lutil -L../st -lst -L../mtr -lmtr -o bddFromTruthTable
+./bddFromTruthTable 4 43a5 f
 ```
+Usage:
+```bash
+Usage: ./bddFromTruthTable <num_vars> <hex_truth> [output_name]
+Example: ./bddFromTruthTable 3 E8 Majority
+```
+
+> [!NOTE]
+> This is for fixed ordered BDD, if you would like dynamic ones, you should remove the comment on `Cudd_AutodynEnable`.
+> You also need to make sure `dot` is installed on system to successfully generate the PNG file.
 
 # Original README
 $Id$
